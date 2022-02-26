@@ -85,7 +85,7 @@ func getLogWriter(filename string, maxSize, maxBackup, maxAge int, compress bool
 
 	// 如果配置了按照日期记录日志文件
 	if logType == "daily" {
-		logname := time.Now().Format("2006-01-02.log")
+		logname := time.Now().Format("2006-01-02") + ".log"
 		filename = strings.ReplaceAll(filename, "logs.log", logname)
 	}
 
